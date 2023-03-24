@@ -1,9 +1,10 @@
 from tkinter import *
 # atm code made by daksh and chirag
+# atm
 class ATM:
     def __init__(self, master):
         self.master = master
-        self.master.title("ATM-Machine")
+        self.master.title("ATM Machine")
         self.master.geometry("300x150")
 
         self.balance = 0
@@ -18,15 +19,15 @@ class ATM:
         self.depositButton.pack(side=RIGHT, padx=5)
 
     def withdraw(self):
-        amount = int(input("Enter the you want to  amount to withdraw: "))
+        amount = int(input("Enter the you want to  amount to withdraw : "))
         if amount > self.balance:
-            print("Insufficient funds!!!")
+            print("Insufficient funds!!")
         else:
             self.balance -= amount
             self.balanceLabel.config(text="Balance: ${}".format(self.balance))
 
     def deposit(self):
-        amount = int(input("Enter amount to deposit: "))
+        amount = int(input("Enter amount you want to deposit: "))
         self.balance += amount
         self.balanceLabel.config(text="Balance: ${}".format(self.balance))
 
