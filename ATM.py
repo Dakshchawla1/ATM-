@@ -19,7 +19,7 @@ class ATM:
         self.depositButton.pack(side=RIGHT, padx=5)
 
     def withdraw(self):
-        amount = int(input("Enter the you want to  amount to withdraw : "))
+        amount = int(input("Enter the you want to  amount to withdraw: "))
         if amount > self.balance:
             print("Insufficient funds!!")
         else:
@@ -27,7 +27,7 @@ class ATM:
             self.balanceLabel.config(text="Balance: ${}".format(self.balance))
 
     def deposit(self):
-        amount = int(input("Enter amount you want to deposit: "))
+        amount = int(input("Enter amount you want to deposit:: "))
         self.balance += amount
         self.balanceLabel.config(text="Balance: ${}".format(self.balance))
 
