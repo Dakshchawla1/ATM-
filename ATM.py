@@ -1,6 +1,6 @@
 from tkinter import *
 # atm code made by daksh and chirag
-# atm
+
 class ATM:
     def __init__(self, master):
         self.master = master
@@ -27,7 +27,7 @@ class ATM:
             self.balanceLabel.config(text="Balance: ${}".format(self.balance))
 
     def deposit(self):
-        amount = int(input("Enter amount you want to deposit:: "))
+        amount = int(input("Enter amount you want to deposit: "))
         self.balance += amount
         self.balanceLabel.config(text="Balance: ${}".format(self.balance))
 
